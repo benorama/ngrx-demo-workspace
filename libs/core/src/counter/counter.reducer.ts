@@ -1,0 +1,25 @@
+import {CounterActions} from './counter.actions';
+import {CounterState, counterInitialState} from './counter.state';
+
+export function counterReducer(state = counterInitialState, action: CounterActions.Actions): CounterState {
+    switch (action.type) {
+
+        case CounterActions.Types.INCREMENT:
+            return Object.assign({}, state, {
+                total: state.total + 1
+            });
+
+        case CounterActions.Types.DECREMENT:
+            return Object.assign({}, state, {
+                total: state.total - 1
+            });
+
+        case CounterActions.Types.RESET_SUCCESS:
+            return counterInitialState;
+
+
+        default: {
+            return state;
+        }
+    }
+}

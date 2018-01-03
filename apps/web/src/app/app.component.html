@@ -1,0 +1,42 @@
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Ngrx/Angular Web App</h3>
+                </div>
+            </div>
+
+            <div class="inner cover">
+
+                <h4>
+                    Counter example
+                </h4>
+                <h1>
+                    {{counter$ | async}}
+                </h1>
+                <p>
+                    <button (click)="increment()" class="btn btn-primary">+1</button>
+                    <button (click)="decrement()" class="btn btn-primary">-1</button>
+                </p>
+                <p>
+                    <button (click)="reset()" class="btn btn-secondary btn-sm">Reset</button>
+                </p>
+
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a
+                        href="https://twitter.com/mdo">@mdo</a>.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

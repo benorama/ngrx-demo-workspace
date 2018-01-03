@@ -1,0 +1,8 @@
+{
+    "name": "ngrx-demo-workspace-mobile",
+    "app_id": "",
+    "type": "ionic-angular",
+    "integrations": {
+        "cordova": {}
+    }
+}
