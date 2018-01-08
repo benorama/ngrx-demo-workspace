@@ -1,44 +1,67 @@
-# NxDemoApps
+
+## Introduction
+
+This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular5 web app and an Ionic3 mobile app.
+
+It is based on a Nx Workspace mono-repo project structure (from Nrwl.io [Nx Extensions](https://github.com/nrwl/nx), an open source toolkit for enterprise Angular applications).
+
+Please check the Medium article [Sharing (Ngrx-based) logic between Angular5 web app and Ionic3 mobile app](https://medium.com/@benorama/sharing-ngrx-based-logic-between-angular5-web-app-and-ionic3-mobile-app-77c19470cccc) for more info.
+
+![Demo](https://cloud.githubusercontent.com/assets/394356/24591063/344c55ee-17f9-11e7-82ca-96821ac723b7.png)
+
+**Goals:**
+
+* encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/platform),
+* keep specific view layout, markup and navigation logic in the app projects.
+
+Note: [@ngrx/store](https://github.com/ngrx/platform) is a RxJS powered state management inspired by Redux for Angular apps.
+It's currently the most popular way to structure complex business logic in Angular apps.
+
+
+## Running the apps locally
+
+```
+# Clone the repo
+git clone https://github.com/benorama/ngrx-demo-workspace.git
+```
+
+Prerequisites, latest version of:
+* [Typescript](https://www.typescriptlang.org/index.html#download-links)
+* [Angular CLI](https://cli.angular.io)
+* [Ionic CLI](http://ionicframework.com/docs/cli/)
+
+### Web app
+
+To run web app, we use the root Nx Project package and Angular CLI.
+
+```
+# Install dependencies
+npm i
+
+# Run the web app locally
+ng serve --app=web
+```
+
+### Mobile app
+
+To run mobile app, we use the mobile app Ionic package and Ionic CLI.
+
+```
+# Go into mobile Ionic app directory
+cd ./app/mobile
+
+# Install dependencies and typings (you can get a burger...)
+npm i
+
+# Run the mobile app locally
+ionic serve
+```
+
+
+## Bugs and feedback
+
+If you have any questions or suggestions to improve the demo app, don't hesitate to submit an issue or a pull request!
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0 using [Nrwl Nx](https://nrwl.io/nx).
-
-## Nrwl Extensions for Angular (Nx)
-
-<a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
-
-Nx is an open source toolkit for enterprise Angular applications.
-
-Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
-
-## Quick Start & Documentation
-
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
-
-## Generate your first application
-
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
-
-## Development server
-
-Run `ng serve --app=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name --app=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build --app=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
