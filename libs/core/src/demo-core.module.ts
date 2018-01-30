@@ -15,7 +15,8 @@ import {MyComponentComponent} from './my-component/my-component.component';
         EffectsModule.forFeature([CounterEffects])
     ],
     providers: [CounterEffects],
-    declarations: [MyComponentComponent]
+    declarations: [MyComponentComponent],
+    exports: [MyComponentComponent]
 })
 export class DemoCoreModule {
 }
