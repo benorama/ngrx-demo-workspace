@@ -48,7 +48,7 @@ To run mobile app, we use the mobile app Ionic package and Ionic CLI.
 
 ```
 # Go into mobile Ionic app directory
-cd ./app/mobile
+cd ./apps/mobile
 
 # Install dependencies and typings (you can get a burger...)
 npm i
