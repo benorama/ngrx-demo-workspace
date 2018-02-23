@@ -4,6 +4,7 @@ import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {NxModule} from '@nrwl/nx';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import {environment} from '@app/env';
         DemoCoreModule,
         StoreModule.forRoot(reducers),
         EffectsModule.forRoot([]),
-        !environment.production ? StoreDevtoolsModule.instrument({maxAge: 25}) : []
+        !environment.production ? StoreDevtoolsModule.instrument({maxAge: 25}) : [],
+        NxModule.forRoot(),
     ],
     bootstrap: [IonicApp],
     entryComponents: [
