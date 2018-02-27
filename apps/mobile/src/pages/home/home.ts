@@ -1,9 +1,7 @@
 import {Component} from '@angular/core';
 
-import {Observable} from 'rxjs/Observable';
-import {Store} from '@ngrx/store';
-
 import {CounterActions} from '@ngrx-demo/core';
+import {Store} from '@ngrx/store';
 import {AppState} from '../../app/app.state';
 
 @Component({
@@ -12,7 +10,7 @@ import {AppState} from '../../app/app.state';
 })
 export class HomePage {
 
-    counter$: Observable<number>;
+    counter$: Store<number>;
 
     constructor(private store: Store<AppState>) {
         this.counter$ = this.store.select(s => s.counter.total);
