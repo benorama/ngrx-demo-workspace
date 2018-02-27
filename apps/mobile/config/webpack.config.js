@@ -13,7 +13,7 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const resolveConfig = {
     extensions: ['.ts', '.js', '.json'],
-    modules: [path.resolve('node_modules'), path.resolve('../../node_modules')],
+    modules: [path.resolve('../../node_modules'), path.resolve('node_modules')],
     plugins: [
         new TsconfigPathsPlugin({/*configFile: "./path/to/tsconfig.json" */})
     ]
