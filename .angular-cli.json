@@ -3,7 +3,7 @@
     "project": {
         "name": "ngrx-demo-workspace",
         "npmScope": "ngrx-demo-workspace",
-        "latestMigration": "20171219-add-affected-commands"
+        "latestMigration": "20180227-cleanup-scripts"
     },
     "e2e": {
         "protractor": {
