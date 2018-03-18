@@ -11,12 +11,12 @@
         "ionic:serve": "ionic-app-scripts serve"
     },
     "dependencies": {
-        "@angular/common": "5.2.8",
-        "@angular/compiler": "5.2.8",
-        "@angular/compiler-cli": "5.2.8",
-        "@angular/core": "5.2.8",
-        "@angular/platform-browser": "5.2.8",
-        "@angular/platform-browser-dynamic": "5.2.8",
+        "@angular/common": "5.2.9",
+        "@angular/compiler": "5.2.9",
+        "@angular/compiler-cli": "5.2.9",
+        "@angular/core": "5.2.9",
+        "@angular/platform-browser": "5.2.9",
+        "@angular/platform-browser-dynamic": "5.2.9",
         "@ionic-native/core": "4.5.3",
         "@ionic-native/splash-screen": "4.5.3",
         "@ionic-native/status-bar": "4.5.3",
