@@ -1,80 +1,82 @@
 {
-    "$schema": "./node_modules/@nrwl/schematics/src/schema.json",
-    "project": {
-        "name": "ngrx-demo-workspace",
-        "npmScope": "ngrx-demo-workspace",
-        "latestMigration": "20180227-cleanup-scripts"
+  "$schema": "./node_modules/@nrwl/schematics/src/schema.json",
+  "project": {
+    "name": "ngrx-demo-workspace",
+    "npmScope": "ngrx-demo-workspace",
+    "latestMigration": "20180328-add-nx-lint"
+  },
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "./tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
     },
-    "e2e": {
-        "protractor": {
-            "config": "./protractor.conf.js"
-        }
+    {
+      "project": "apps/web/src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
     },
-    "lint": [
-        {
-            "project": "./tsconfig.spec.json",
-            "exclude": "**/node_modules/**"
-        },
-        {
-            "project": "apps/web/src/tsconfig.app.json",
-            "exclude": "**/node_modules/**"
-        },
-        {
-            "project": "apps/web/e2e/tsconfig.e2e.json",
-            "exclude": "**/node_modules/**"
-        }
-    ],
-    "test": {
-        "karma": {
-            "config": "./karma.conf.js"
-        }
+    {
+      "project": "apps/web/e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "schematics": {
+      "collection": "@nrwl/schematics",
+      "postGenerate": "npm run format",
+      "newProject": [
+        "app",
+        "lib"
+      ]
     },
-    "defaults": {
-        "schematics": {
-            "collection": "@nrwl/schematics",
-            "postGenerate": "npm run format",
-            "newProject": [
-                "app",
-                "lib"
-            ]
-        },
-        "styleExt": "css",
-        "component": {}
+    "styleExt": "css",
+    "component": {}
+  },
+  "warnings": {
+    "typescriptMismatch": false
+  },
+  "apps": [
+    {
+      "name": "web",
+      "root": "apps/web/src",
+      "outDir": "dist/apps/web",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "tags": []
     },
-    "warnings": {
-        "typescriptMismatch": false
-    },
-    "apps": [
-        {
-            "name": "web",
-            "root": "apps/web/src",
-            "outDir": "dist/apps/web",
-            "assets": [
-                "assets",
-                "favicon.ico"
-            ],
-            "index": "index.html",
-            "main": "main.ts",
-            "polyfills": "polyfills.ts",
-            "test": "../../../test.js",
-            "tsconfig": "tsconfig.app.json",
-            "testTsconfig": "../../../tsconfig.spec.json",
-            "prefix": "app",
-            "styles": [
-                "styles.css"
-            ],
-            "scripts": [],
-            "environmentSource": "environments/environment.ts",
-            "environments": {
-                "dev": "environments/environment.ts",
-                "prod": "environments/environment.prod.ts"
-            }
-        },
-        {
-            "name": "core",
-            "root": "libs/core/src",
-            "test": "../../../test.js",
-            "appRoot": ""
-        }
-    ]
+    {
+      "name": "core",
+      "root": "libs/core/src",
+      "test": "../../../test.js",
+      "appRoot": "",
+      "tags": []
+    }
+  ]
 }
