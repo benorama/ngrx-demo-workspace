@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-
+import {Store, select} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
-import {Store} from '@ngrx/store';
 
 import {CounterActions} from '@ngrx-demo/core';
 import {AppState} from './app.state';
@@ -16,7 +15,7 @@ export class AppComponent {
     counter$: Observable<number>;
 
     constructor(private store: Store<AppState>) {
-        this.counter$ = this.store.select(s => s.counter.total);
+        this.counter$ = this.store.pipe(select('counter', 'total'));
     }
 
     decrement() {
