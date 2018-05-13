@@ -5,14 +5,16 @@ export function counterReducer(state = counterInitialState, action: CounterActio
     switch (action.type) {
 
         case CounterActions.Types.INCREMENT:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 total: state.total + 1
-            });
+            };
 
         case CounterActions.Types.DECREMENT:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 total: state.total - 1
-            });
+            };
 
         case CounterActions.Types.RESET_SUCCESS:
             return counterInitialState;
