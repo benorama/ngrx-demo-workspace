@@ -1,44 +1,40 @@
-import {NgModule, ErrorHandler} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import {RouteReuseStrategy} from '@angular/router';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
+import {StatusBar} from '@ionic-native/status-bar/ngx';
+
+import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
+
+import {DemoCoreModule} from '@ngrx-demo/core';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {NxModule} from '@nrwl/nx';
-
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
-
-import {DemoCoreModule} from '@ngrx-demo/core';
+import {environment} from '../environments/environment';
+import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
-import {HomePage} from '../pages/home/home';
-import {reducers} from './app.reducer';
-import {environment} from '@app/env';
+import {reducers} from './app.reducer'
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HomePage
+        AppComponent
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(AppComponent),
+        IonicModule.forRoot(),
         DemoCoreModule,
         StoreModule.forRoot(reducers),
         EffectsModule.forRoot([]),
         !environment.production ? StoreDevtoolsModule.instrument({maxAge: 25}) : [],
-        NxModule.forRoot(),
+        AppRoutingModule
     ],
-    bootstrap: [IonicApp],
-    entryComponents: [
-        AppComponent,
-        HomePage
-    ],
+    bootstrap: [AppComponent],
+    entryComponents: [],
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: ErrorHandler, useClass: IonicErrorHandler}
+        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ]
 })
 export class AppModule {

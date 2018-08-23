@@ -1,5 +1,5 @@
 import {CounterActions} from './counter.actions';
-import {CounterState, counterInitialState} from './counter.state';
+import {counterInitialState, CounterState} from './counter.state';
 
 export function counterReducer(state = counterInitialState, action: CounterActions.Actions): CounterState {
     switch (action.type) {

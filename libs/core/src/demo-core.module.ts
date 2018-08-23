@@ -1,11 +1,11 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {StoreModule} from '@ngrx/store';
+import {NgModule} from '@angular/core';
 import {EffectsModule} from '@ngrx/effects';
+import {StoreModule} from '@ngrx/store';
+import {CounterEffects} from './counter/counter.effects';
 
 import {counterReducer} from './counter/counter.reducer';
 import {counterInitialState} from './counter/counter.state';
-import {CounterEffects} from './counter/counter.effects';
 import {MyComponentComponent} from './my-component/my-component.component';
 
 @NgModule({

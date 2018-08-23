@@ -1,21 +1,23 @@
-import {Component} from '@angular/core';
-import {Store, select} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
+import {Component, HostBinding} from '@angular/core';
 
-import {CounterActions} from '@ngrx-demo/core';
+import {CounterActions, CounterState} from '@ngrx-demo/core';
+import {select, Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
 import {AppState} from './app.state';
 
 @Component({
-    selector: 'app-root',
+    selector: 'ngrx-demo-web',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
-    counter$: Observable<number>;
+    @HostBinding('attr.class') class = 'mx-auto';
+
+    counter$: Observable<CounterState>;
 
     constructor(private store: Store<AppState>) {
-        this.counter$ = this.store.pipe(select('counter', 'total'));
+        this.counter$ = this.store.pipe(select('counter'));
     }
 
     decrement() {

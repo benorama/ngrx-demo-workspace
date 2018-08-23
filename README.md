@@ -1,7 +1,7 @@
 
 ## Introduction
 
-This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular5 web app and an Ionic3 mobile app.
+This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular6 web app and an Ionic4 mobile app.
 
 It is based on a Nx Workspace mono-repo project structure (from Nrwl.io [Nx Extensions](https://github.com/nrwl/nx), an open source toolkit for enterprise Angular applications).
 
@@ -39,7 +39,7 @@ To run web app, we use the root Nx Project package and Angular CLI.
 npm i
 
 # Run the web app locally
-ng serve --app=web
+ng serve web
 ```
 
 ### Mobile app
@@ -55,6 +55,9 @@ npm i
 
 # Run the mobile app locally
 ionic serve
+
+# Or from the root
+ng serve mobile
 ```
 
 

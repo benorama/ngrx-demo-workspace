@@ -1,6 +1,6 @@
-import {counterReducer} from './counter.reducer';
-import {CounterState, counterInitialState} from './counter.state';
 import {CounterActions} from './counter.actions';
+import {counterReducer} from './counter.reducer';
+import {counterInitialState, CounterState} from './counter.state';
 
 describe('counterReducer', () => {
     it('should increment', () => {

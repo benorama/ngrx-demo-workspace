@@ -3,7 +3,7 @@ import {Action} from '@ngrx/store';
 export namespace CounterActions {
 
     export const Types = {
-        INCREMENT:'[Counter] Increment',
+        INCREMENT: '[Counter] Increment',
         DECREMENT: '[Counter] Decrement',
         RESET: '[Counter] Reset',
         RESET_SUCCESS: '[Counter] ResetSucess'

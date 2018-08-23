@@ -1,57 +1,26 @@
 {
-    "name": "ngrx-demo-workspace-mobile",
-    "version": "0.0.2",
-    "author": "Benoit Hediard",
-    "private": true,
+    "name": "mobile",
+    "version": "0.0.1",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
     "scripts": {
-        "clean": "ionic-app-scripts clean",
-        "build": "ionic-app-scripts build",
-        "lint": "ionic-app-scripts lint",
-        "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve"
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e"
     },
+    "private": true,
     "dependencies": {
-        "@angular/common": "5.2.10",
-        "@angular/compiler": "5.2.10",
-        "@angular/compiler-cli": "5.2.10",
-        "@angular/core": "5.2.10",
-        "@angular/platform-browser": "5.2.10",
-        "@angular/platform-browser-dynamic": "5.2.10",
-        "@ionic-native/core": "4.7.0",
-        "@ionic-native/splash-screen": "4.7.0",
-        "@ionic-native/status-bar": "4.7.0",
-        "@ionic/storage": "2.1.3",
-        "cordova-android": "^7.1.0",
-        "cordova-ios": "^4.4.0",
-        "cordova-plugin-device": "^2.0.1",
-        "cordova-plugin-ionic-webview": "^1.1.16",
-        "cordova-plugin-splashscreen": "^5.0.2",
-        "cordova-plugin-whitelist": "^1.3.1",
-        "ionic-angular": "3.9.2",
-        "ionic-plugin-keyboard": "^2.2.1",
-        "ionicons": "3.0.0",
-        "sw-toolbox": "3.6.0"
+        "@ionic-native/core": "5.0.0-beta.14",
+        "@ionic-native/splash-screen": "5.0.0-beta.14",
+        "@ionic-native/status-bar": "5.0.0-beta.14",
+        "@ionic/angular": "^4.0.0-beta.0"
     },
     "devDependencies": {
-        "@ionic/app-scripts": "3.1.9",
-        "tsconfig-paths-webpack-plugin": "2.0.0",
-        "typescript": "2.7.2"
+        "@ionic/ng-toolkit": "^1.0.0",
+        "@ionic/schematics-angular": "^1.0.0"
     },
-    "description": "An Ionic project",
-    "config": {
-        "ionic_watch": "./config/watch.config.js",
-        "ionic_webpack": "./config/webpack.config.js"
-    },
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-device": {},
-            "cordova-plugin-ionic-webview": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
-        },
-        "platforms": [
-            "ios"
-        ]
-    }
+    "description": "An Ionic project"
 }

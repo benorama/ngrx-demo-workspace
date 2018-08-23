@@ -1,0 +1,28 @@
+.cover-container {
+    min-width: 600px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.connected-status {
+    background-color: red;
+    border-radius: 50%;
+    display: block;
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.connected-status.offline {
+    background-color: red;
+}
+
+.connected-status.online {
+    background-color: green;
+}
+
+#loginForm {
+    max-width: 350px;
+}

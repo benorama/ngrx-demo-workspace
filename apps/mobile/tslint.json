@@ -1,11 +1,17 @@
 {
+    "extends": "../../tslint.json",
     "rules": {
-        "no-duplicate-variable": true,
-        "no-unused-variable": [
-            true
+        "directive-selector": [
+            true,
+            "attribute",
+            "ngrx-demo-mobile",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "ngrx-demo-mobile",
+            "kebab-case"
         ]
-    },
-    "rulesDirectory": [
-        "node_modules/tslint-eslint-rules/dist/rules"
-    ]
+    }
 }
