@@ -4,5 +4,13 @@
     "integrations": {
         "cordova": {}
     },
-    "type": "angular"
+    "type": "angular",
+    "projects": {
+        "mobile": {
+            "name": "New Ionic App",
+            "integrations": {
+                "cordova": {}
+            }
+        }
+    }
 }
