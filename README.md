@@ -30,6 +30,8 @@ Prerequisites, latest version of:
 * [Angular CLI](https://cli.angular.io)
 * [Ionic CLI](http://ionicframework.com/docs/cli/)
 
+WARNING: in order to be able to support Ionic multi-app projects, you'll need the latest Ionic CLI (4.3.0+, with `npm install -g ionic@latest`) and latest NodeJS (v10+) 
+
 ### Web app
 
 To run web app, we use the root Nx Project package and Angular CLI.
@@ -50,13 +52,13 @@ To run mobile app, we use the mobile app Ionic package and Ionic CLI.
 # Go into mobile Ionic app directory
 cd ./apps/mobile
 
-# Install dependencies and typings (you can get a burger...)
+# Install mobile dependencies (you can get a burger...)
 npm i
+cd ../..
 
 # Run the mobile app locally
 ionic serve
-
-# Or from the root
+# Or
 ng serve mobile
 ```
 
