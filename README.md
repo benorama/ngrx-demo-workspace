@@ -1,7 +1,7 @@
 
 ## Introduction
 
-This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular6 web app and an Ionic4 mobile app.
+This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular7 web app and an Ionic4 mobile app.
 
 It is based on a Nx Workspace mono-repo project structure (from Nrwl.io [Nx Extensions](https://github.com/nrwl/nx), an open source toolkit for enterprise Angular applications).
 
@@ -69,4 +69,4 @@ If you have any questions or suggestions to improve the demo app, don't hesitate
 
 ---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0 using [Nrwl Nx](https://nrwl.io/nx).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
