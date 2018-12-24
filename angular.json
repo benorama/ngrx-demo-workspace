@@ -2,14 +2,18 @@
     "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
     "version": 1,
     "defaultProject": "web",
-    "newProjectRoot": "",
+    "newProjectRoot": "apps",
     "projects": {
         "web": {
             "root": "apps/web/",
             "sourceRoot": "apps/web/src",
             "projectType": "application",
             "prefix": "ngrx-demo-web",
-            "schematics": {},
+            "schematics": {
+                "@schematics/angular:component": {
+                "styleext": "scss"
+            }
+            },
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
@@ -44,7 +48,14 @@
                             "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
-                            "buildOptimizer": true
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                  "type": "initial",
+                                  "maximumWarning": "2mb",
+                                  "maximumError": "5mb"
+                                }
+                            ]
                         }
                     }
                 },
@@ -176,7 +187,17 @@
                             "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
-                            "buildOptimizer": true
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                  "type": "initial",
+                                  "maximumWarning": "2mb",
+                                  "maximumError": "5mb"
+                                }
+                            ]
+                        },
+                        "ci": {
+                          "progress": false
                         }
                     }
                 },
@@ -188,6 +209,9 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "mobile:build:production"
+                        },
+                        "ci": {
+                            "progress": false
                         }
                     }
                 },
@@ -220,6 +244,12 @@
                                 "output": "/assets"
                             }
                         ]
+                    },
+                    "configurations": {
+                        "ci": {
+                            "progress": false,
+                            "watch": false
+                        }
                     }
                 },
                 "lint": {
@@ -271,8 +301,8 @@
                         "devServerTarget": "mobile:serve"
                     },
                     "configurations": {
-                        "production": {
-                            "devServerTarget": "mobile:serve:production"
+                        "ci": {
+                          "devServerTarget": "mobile:serve:ci"
                         }
                     }
                 },
@@ -324,10 +354,10 @@
         "defaultCollection": "@nrwl/schematics"
     },
     "schematics": {
-        "@ionic/schematics-angular:component": {
+        "@ionic/angular-toolkit:component": {
             "styleext": "scss"
         },
-        "@ionic/schematics-angular:page": {
+        "@ionic/angular-toolkit:page": {
             "styleext": "scss"
         }
     }
