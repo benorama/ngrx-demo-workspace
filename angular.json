@@ -265,7 +265,7 @@
                     }
                 },
                 "ionic-cordova-build": {
-                    "builder": "@ionic/ng-toolkit:cordova-build",
+                    "builder": "@ionic/angular-toolkit:cordova-build",
                     "options": {
                         "browserTarget": "mobile:build"
                     },
@@ -276,7 +276,7 @@
                     }
                 },
                 "ionic-cordova-serve": {
-                    "builder": "@ionic/ng-toolkit:cordova-serve",
+                    "builder": "@ionic/angular-toolkit:cordova-serve",
                     "options": {
                         "cordovaBuildTarget": "mobile:ionic-cordova-build",
                         "devServerTarget": "mobile:serve"
