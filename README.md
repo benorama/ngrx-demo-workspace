@@ -1,11 +1,11 @@
 
 ## Introduction
 
-This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular7 web app and an Ionic4 mobile app.
+This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular8 web app and an Ionic4 mobile app.
 
 It is based on a Nx Workspace mono-repo project structure (from Nrwl.io [Nx Extensions](https://github.com/nrwl/nx), an open source toolkit for enterprise Angular applications).
 
-Please check the Medium article [Sharing (Ngrx-based) logic between Angular5 web app and Ionic3 mobile app](https://medium.com/@benorama/sharing-ngrx-based-logic-between-angular5-web-app-and-ionic3-mobile-app-77c19470cccc) for more info.
+Please check the Medium article [Sharing (Ngrx-based) logic between Angular8 web app and Ionic4 mobile app](https://medium.com/@benorama/sharing-ngrx-based-logic-between-angular5-web-app-and-ionic3-mobile-app-77c19470cccc) for more info.
 
 ![Demo](https://cloud.githubusercontent.com/assets/394356/24591063/344c55ee-17f9-11e7-82ca-96821ac723b7.png)
 
