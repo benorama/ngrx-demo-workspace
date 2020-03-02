@@ -30,7 +30,6 @@ import {reducers} from './app.reducer'
         AppRoutingModule
     ],
     bootstrap: [AppComponent],
-    entryComponents: [],
     providers: [
         StatusBar,
         SplashScreen,

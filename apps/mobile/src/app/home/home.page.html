@@ -6,16 +6,16 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <h2 text-center>
+<ion-content [fullscreen]="true" id="container">
+    <h1>
         {{counter$ | async}}
-    </h2>
+    </h1>
     <!-- <app-my-component></app-my-component> -->
-    <p text-center>
+    <p>
         <ion-button (click)="increment()"> +1</ion-button>
         <ion-button (click)="decrement()"> -1</ion-button>
     </p>
-    <p text-center>
+    <p>
         <ion-button (click)="reset()"> Reset</ion-button>
     </p>
 </ion-content>
