@@ -1,13 +1,13 @@
 {
-  "defaultProject": "mobile",
-  "projects": {
-    "mobile": {
-      "name": "New Ionic App",
-      "integrations": {
-        "cordova": {}
-      },
-      "type": "angular",
-      "root": "apps/mobile"
+    "defaultProject": "mobile",
+    "projects": {
+        "mobile": {
+            "name": "New Ionic App",
+            "integrations": {
+                "cordova": {}
+            },
+            "type": "angular",
+            "root": "apps/mobile"
+        }
     }
-  }
 }

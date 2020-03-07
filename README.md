@@ -1,4 +1,3 @@
-
 ## Introduction
 
 This is a proof of concept that demonstrates the ability to share core functionalities and ngrx-based business logic between an Angular8 web app and an Ionic4 mobile app.
@@ -11,12 +10,11 @@ Please check the Medium article [Sharing (Ngrx-based) logic between Angular8 web
 
 **Goals:**
 
-* encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/platform),
-* keep specific view layout, markup and navigation logic in the app projects.
+-   encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/platform),
+-   keep specific view layout, markup and navigation logic in the app projects.
 
 Note: [@ngrx/store](https://github.com/ngrx/platform) is a RxJS powered state management inspired by Redux for Angular apps.
 It's currently the most popular way to structure complex business logic in Angular apps.
-
 
 ## Running the apps locally
 
@@ -26,11 +24,12 @@ git clone https://github.com/benorama/ngrx-demo-workspace.git
 ```
 
 Prerequisites, latest version of:
-* [Typescript](https://www.typescriptlang.org/index.html#download-links)
-* [Angular CLI](https://cli.angular.io)
-* [Ionic CLI](http://ionicframework.com/docs/cli/)
 
-WARNING: in order to be able to support Ionic multi-app projects, you'll need the latest Ionic CLI (4.3.0+, with `npm install -g ionic@latest`) and latest NodeJS (v10+) 
+-   [Typescript](https://www.typescriptlang.org/index.html#download-links)
+-   [Angular CLI](https://cli.angular.io)
+-   [Ionic CLI](http://ionicframework.com/docs/cli/)
+
+WARNING: in order to be able to support Ionic multi-app projects, you'll need the latest Ionic CLI (4.3.0+, with `npm install -g ionic@latest`) and latest NodeJS (v10+)
 
 ### Web app
 
@@ -61,7 +60,6 @@ ionic serve
 # Or
 ng serve mobile
 ```
-
 
 ## Bugs and feedback
 

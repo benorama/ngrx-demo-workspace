@@ -1,9 +1,8 @@
-import {CounterActions} from './counter.actions';
-import {counterInitialState, CounterState} from './counter.state';
+import { CounterActions } from './counter.actions';
+import { counterInitialState, CounterState } from './counter.state';
 
 export function counterReducer(state = counterInitialState, action: CounterActions.Actions): CounterState {
     switch (action.type) {
-
         case CounterActions.Types.INCREMENT:
             return {
                 ...state,
@@ -18,7 +17,6 @@ export function counterReducer(state = counterInitialState, action: CounterActio
 
         case CounterActions.Types.RESET_SUCCESS:
             return counterInitialState;
-
 
         default: {
             return state;

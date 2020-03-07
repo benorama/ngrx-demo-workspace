@@ -1,2 +1,2 @@
 export * from './src/counter';
-export {DemoCoreModule} from './src/demo-core.module';
+export { DemoCoreModule } from './src/demo-core.module';

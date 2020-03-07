@@ -1,7 +1,6 @@
-import {Action} from '@ngrx/store';
+import { Action } from '@ngrx/store';
 
 export namespace CounterActions {
-
     export const Types = {
         INCREMENT: '[Counter] Increment',
         DECREMENT: '[Counter] Decrement',
@@ -25,12 +24,5 @@ export namespace CounterActions {
         readonly type = Types.RESET_SUCCESS;
     }
 
-    export type Actions =
-        IncrementAction
-        | DecrementAction
-        | ResetAction
-        | ResetSuccessAction;
-
-
+    export type Actions = IncrementAction | DecrementAction | ResetAction | ResetSuccessAction;
 }
-

@@ -24,13 +24,8 @@
                         "polyfills": "apps/web/src/polyfills.ts",
                         "tsConfig": "apps/web/tsconfig.app.json",
                         "aot": true,
-                        "assets": [
-                            "apps/web/src/favicon.ico",
-                            "apps/web/src/assets"
-                        ],
-                        "styles": [
-                            "apps/web/src/styles.css"
-                        ],
+                        "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
+                        "styles": ["apps/web/src/styles.css"],
                         "scripts": []
                     },
                     "configurations": {
@@ -88,26 +83,16 @@
                         "polyfills": "apps/web/src/polyfills.ts",
                         "tsConfig": "apps/web/tsconfig.spec.json",
                         "karmaConfig": "apps/web/karma.conf.js",
-                        "styles": [
-                            "apps/web/src/styles.css"
-                        ],
+                        "styles": ["apps/web/src/styles.css"],
                         "scripts": [],
-                        "assets": [
-                            "apps/web/src/favicon.ico",
-                            "apps/web/src/assets"
-                        ]
+                        "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"]
                     }
                 },
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
-                        "tsConfig": [
-                            "apps/web/tsconfig.app.json",
-                            "apps/web/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "tsConfig": ["apps/web/tsconfig.app.json", "apps/web/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
@@ -132,9 +117,7 @@
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
                         "tsConfig": "apps/web-e2e/tsconfig.e2e.json",
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
@@ -233,9 +216,7 @@
                         "polyfills": "apps/mobile/src/polyfills.ts",
                         "tsConfig": "apps/mobile/tsconfig.spec.json",
                         "karmaConfig": "apps/mobile/karma.conf.js",
-                        "styles": [
-                            "apps/mobile/src/styles.css"
-                        ],
+                        "styles": ["apps/mobile/src/styles.css"],
                         "scripts": [],
                         "assets": [
                             {
@@ -260,13 +241,8 @@
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
-                        "tsConfig": [
-                            "apps/mobile/tsconfig.app.json",
-                            "apps/mobile/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "tsConfig": ["apps/mobile/tsconfig.app.json", "apps/mobile/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**"]
                     }
                 },
                 "ionic-cordova-build": {
@@ -315,9 +291,7 @@
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
                         "tsConfig": "apps/mobile-e2e/tsconfig.e2e.json",
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
@@ -339,13 +313,8 @@
                 "lint": {
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
-                        "tsConfig": [
-                            "libs/core/tsconfig.lib.json",
-                            "libs/core/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
+                        "tsConfig": ["libs/core/tsconfig.lib.json", "libs/core/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }

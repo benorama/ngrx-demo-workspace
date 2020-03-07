@@ -4,11 +4,6 @@
         "outDir": "../../dist/out-tsc/apps/mobile",
         "types": []
     },
-    "exclude": [
-        "src/test.ts",
-        "**/*.spec.ts"
-    ],
-    "include": [
-        "**/*.ts"
-    ]
+    "exclude": ["src/test.ts", "**/*.spec.ts"],
+    "include": ["**/*.ts"]
 }

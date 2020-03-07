@@ -1,8 +1,8 @@
-import {TestBed} from '@angular/core/testing';
-import {provideMockActions} from '@ngrx/effects/testing';
-import {StoreModule} from '@ngrx/store';
-import {DataPersistence} from '@nrwl/nx';
-import {CounterEffects} from './counter.effects';
+import { TestBed } from '@angular/core/testing';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { StoreModule } from '@ngrx/store';
+import { DataPersistence } from '@nrwl/nx';
+import { CounterEffects } from './counter.effects';
 
 describe('CounterEffects', () => {
     let actions;

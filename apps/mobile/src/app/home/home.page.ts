@@ -1,17 +1,16 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {CounterActions} from '@ngrx-demo/core';
-import {select, Store} from '@ngrx/store';
-import {Observable} from 'rxjs';
-import {AppState} from '../../app/app.state';
+import { CounterActions } from '@ngrx-demo/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { AppState } from '../../app/app.state';
 
 @Component({
     selector: 'app-home',
     templateUrl: 'home.page.html',
-    styleUrls: ['home.page.scss'],
+    styleUrls: ['home.page.scss']
 })
 export class HomePage {
-
     counter$: Observable<number>;
 
     constructor(private store: Store<AppState>) {
@@ -29,5 +28,4 @@ export class HomePage {
     reset() {
         this.store.dispatch(new CounterActions.ResetAction());
     }
-
 }
