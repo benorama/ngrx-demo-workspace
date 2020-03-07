@@ -11,8 +11,8 @@
             "prefix": "ngrx-demo-web",
             "schematics": {
                 "@schematics/angular:component": {
-                "styleext": "scss"
-            }
+                    "styleext": "scss"
+                }
             },
             "architect": {
                 "build": {
@@ -23,6 +23,7 @@
                         "main": "apps/web/src/main.ts",
                         "polyfills": "apps/web/src/polyfills.ts",
                         "tsConfig": "apps/web/tsconfig.app.json",
+                        "aot": true,
                         "assets": [
                             "apps/web/src/favicon.ico",
                             "apps/web/src/assets"
@@ -45,15 +46,19 @@
                             "sourceMap": false,
                             "extractCss": true,
                             "namedChunks": false,
-                            "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
                             "buildOptimizer": true,
                             "budgets": [
                                 {
-                                  "type": "initial",
-                                  "maximumWarning": "2mb",
-                                  "maximumError": "5mb"
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
                                 }
                             ]
                         }
@@ -149,6 +154,7 @@
                         "main": "apps/mobile/src/main.ts",
                         "polyfills": "apps/mobile/src/polyfills.ts",
                         "tsConfig": "apps/mobile/tsconfig.app.json",
+                        "aot": true,
                         "assets": [
                             {
                                 "glob": "**/*",
@@ -184,20 +190,19 @@
                             "sourceMap": false,
                             "extractCss": true,
                             "namedChunks": false,
-                            "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
                             "buildOptimizer": true,
                             "budgets": [
                                 {
-                                  "type": "initial",
-                                  "maximumWarning": "2mb",
-                                  "maximumError": "5mb"
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
                                 }
                             ]
                         },
                         "ci": {
-                          "progress": false
+                            "progress": false
                         }
                     }
                 },
@@ -302,7 +307,7 @@
                     },
                     "configurations": {
                         "ci": {
-                          "devServerTarget": "mobile:serve:ci"
+                            "devServerTarget": "mobile:serve:ci"
                         }
                     }
                 },
@@ -347,11 +352,7 @@
         }
     },
     "cli": {
-        "warnings": {
-            "typescriptMismatch": false,
-            "versionMismatch": false
-        },
-        "defaultCollection": "@nrwl/schematics"
+        "defaultCollection": "@nrwl/angular"
     },
     "schematics": {
         "@ionic/angular-toolkit:component": {
