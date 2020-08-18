@@ -12,16 +12,12 @@
     },
     "projects": {
         "web": {
-            "tags": []
-        },
-        "web-e2e": {
-            "tags": []
+            "tags": [],
+            "implicitDependencies": ["core"]
         },
         "mobile": {
-            "tags": []
-        },
-        "mobile-e2e": {
-            "tags": []
+            "tags": [],
+            "implicitDependencies": ["core"]
         },
         "core": {
             "tags": []

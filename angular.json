@@ -97,31 +97,6 @@
                 }
             }
         },
-        "web-e2e": {
-            "root": "apps/web-e2e/",
-            "projectType": "application",
-            "architect": {
-                "e2e": {
-                    "builder": "@angular-devkit/build-angular:protractor",
-                    "options": {
-                        "protractorConfig": "apps/web-e2e/protractor.conf.js",
-                        "devServerTarget": "web:serve"
-                    },
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "web:serve:production"
-                        }
-                    }
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": "apps/web-e2e/tsconfig.e2e.json",
-                        "exclude": ["**/node_modules/**"]
-                    }
-                }
-            }
-        },
         "mobile": {
             "root": "apps/mobile/",
             "sourceRoot": "apps/mobile/src",
@@ -267,31 +242,6 @@
                             "cordovaBuildTarget": "mobile:ionic-cordova-build:production",
                             "devServerTarget": "mobile:serve:production"
                         }
-                    }
-                }
-            }
-        },
-        "mobile-e2e": {
-            "root": "apps/mobile-e2e/",
-            "projectType": "application",
-            "architect": {
-                "e2e": {
-                    "builder": "@angular-devkit/build-angular:protractor",
-                    "options": {
-                        "protractorConfig": "apps/mobile-e2e/protractor.conf.js",
-                        "devServerTarget": "mobile:serve"
-                    },
-                    "configurations": {
-                        "ci": {
-                            "devServerTarget": "mobile:serve:ci"
-                        }
-                    }
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": "apps/mobile-e2e/tsconfig.e2e.json",
-                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }

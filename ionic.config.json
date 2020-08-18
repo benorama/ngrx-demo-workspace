@@ -2,10 +2,8 @@
     "defaultProject": "mobile",
     "projects": {
         "mobile": {
-            "name": "New Ionic App",
-            "integrations": {
-                "cordova": {}
-            },
+            "name": "Ngrx demo",
+            "integrations": {},
             "type": "angular",
             "root": "apps/mobile"
         }

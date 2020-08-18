@@ -48,17 +48,10 @@ ng serve web
 To run mobile app, we use the mobile app Ionic package and Ionic CLI.
 
 ```
-# Go into mobile Ionic app directory
-cd ./apps/mobile
-
-# Install mobile dependencies (you can get a burger...)
-npm i
-cd ../..
-
 # Run the mobile app locally
-ionic serve
-# Or
 ng serve mobile
+# Or
+ionic serve
 ```
 
 ## Bugs and feedback
