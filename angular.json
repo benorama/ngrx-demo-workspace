@@ -50,7 +50,6 @@
                         "main": "apps/mobile/src/main.ts",
                         "polyfills": "apps/mobile/src/polyfills.ts",
                         "tsConfig": "apps/mobile/tsconfig.app.json",
-                        "aot": true,
                         "assets": [
                             {
                                 "glob": "**/*",
@@ -71,7 +70,13 @@
                                 "input": "apps/mobile/src/global.scss"
                             }
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -103,7 +108,8 @@
                     },
                     "outputs": [
                         "{options.outputPath}"
-                    ]
+                    ],
+                    "defaultConfiguration": ""
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
@@ -221,7 +227,6 @@
                         "main": "apps/web/src/main.ts",
                         "polyfills": "apps/web/src/polyfills.ts",
                         "tsConfig": "apps/web/tsconfig.app.json",
-                        "aot": true,
                         "assets": [
                             "apps/web/src/favicon.ico",
                             "apps/web/src/assets"
@@ -229,7 +234,13 @@
                         "styles": [
                             "apps/web/src/styles.css"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -263,7 +274,8 @@
                     },
                     "outputs": [
                         "{options.outputPath}"
-                    ]
+                    ],
+                    "defaultConfiguration": ""
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
