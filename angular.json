@@ -19,18 +19,6 @@
                     "outputs": [
                         "coverage/libs/core"
                     ]
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "libs/core/tsconfig.lib.json",
-                            "libs/core/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
-                    }
                 }
             },
             "tags": []
@@ -89,7 +77,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
                             "vendorChunk": false,
@@ -122,7 +109,6 @@
                             "browserTarget": "mobile:build:production"
                         },
                         "ci": {
-                            "progress": false
                         }
                     }
                 },
@@ -165,18 +151,6 @@
                     "outputs": [
                         "coverage/apps/mobile/"
                     ]
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "apps/mobile/tsconfig.app.json",
-                            "apps/mobile/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
-                    }
                 },
                 "ionic-cordova-build": {
                     "builder": "@ionic/angular-toolkit:cordova-build",
@@ -253,7 +227,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
                             "vendorChunk": false,
@@ -313,18 +286,6 @@
                     "outputs": [
                         "coverage/apps/web/"
                     ]
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "apps/web/tsconfig.app.json",
-                            "apps/web/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
-                    }
                 }
             },
             "tags": [],
