@@ -10,17 +10,27 @@
         "tslint.json": "*",
         "nx.json": "*"
     },
-    "projects": {
-        "web": {
-            "tags": [],
-            "implicitDependencies": ["core"]
+    "cli": {
+        "defaultCollection": "@nrwl/angular"
+    },
+    "defaultProject": "web",
+    "generators": {
+        "@ionic/angular-toolkit:component": {
+            "styleext": "scss"
         },
-        "mobile": {
-            "tags": [],
-            "implicitDependencies": ["core"]
-        },
-        "core": {
-            "tags": []
+        "@ionic/angular-toolkit:page": {
+            "styleext": "scss"
         }
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
+    },
+    "affected": {
+        "defaultBase": "master"
     }
 }
